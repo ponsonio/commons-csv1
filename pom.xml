@@ -249,7 +249,7 @@ CSV files of various types.
         <artifactId>coveralls-maven-plugin</artifactId>
         <version>${coveralls.version}</version>
         <configuration>
-          <repoToken>6cWot5lHLrPT1sSuOcZYoDajFkFBghPZg</repoToken>
+          <repoToken>rJCXfwrdSSDljnGpn5ojpuJ5vuUmRUcUP</repoToken>
         </configuration>
       </plugin>
     </plugins>

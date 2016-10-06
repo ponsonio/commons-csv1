@@ -142,7 +142,7 @@ CSV files of various types.
     <checkstyle.header.file>${basedir}/LICENSE-header.txt</checkstyle.header.file>
     <checkstyle.resourceExcludes>LICENSE.txt, NOTICE.txt</checkstyle.resourceExcludes>
 
-    <coveralls.version>4.0.0</coveralls.version>
+    <coveralls.version>4.2.0-SNAPSHOT</coveralls.version>
   </properties>
 
   <build>
@@ -249,6 +249,7 @@ CSV files of various types.
         <artifactId>coveralls-maven-plugin</artifactId>
         <version>${coveralls.version}</version>
         <configuration>
+          <timestampFormat>EpochMillis</timestampFormat>
           <repoToken>rJCXfwrdSSDljnGpn5ojpuJ5vuUmRUcUP</repoToken>
         </configuration>
       </plugin>

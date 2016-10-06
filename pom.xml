@@ -141,6 +141,8 @@ CSV files of various types.
     <checkstyle.version>2.17</checkstyle.version>
     <checkstyle.header.file>${basedir}/LICENSE-header.txt</checkstyle.header.file>
     <checkstyle.resourceExcludes>LICENSE.txt, NOTICE.txt</checkstyle.resourceExcludes>
+
+    <coveralls.version>4.0.0</coveralls.version>
   </properties>
 
   <build>
@@ -221,6 +223,33 @@ CSV files of various types.
             <exclude>src/test/resources/ferc.gov/contract.txt</exclude>
             <exclude>src/test/resources/ferc.gov/transaction.txt</exclude>
           </excludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.7.5.201505241946</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>report</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.eluder.coveralls</groupId>
+        <artifactId>coveralls-maven-plugin</artifactId>
+        <version>${coveralls.version}</version>
+        <configuration>
+          <repoToken>6cWot5lHLrPT1sSuOcZYoDajFkFBghPZg</repoToken>
         </configuration>
       </plugin>
     </plugins>
